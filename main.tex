@@ -1,0 +1,117 @@
+\documentclass[12pt]{article}
+\usepackage[english]{babel}
+\usepackage{cmbright}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage[sf]{libertine}
+\usepackage{microtype}
+\usepackage{paracol}
+\usepackage{supertabular}
+\usepackage{titlesec}
+\hypersetup{colorlinks, urlcolor=black, linkcolor=black}
+
+% Geometry
+\geometry{hmargin=1.75cm, vmargin=2.5cm}
+\columnratio{0.65, 0.35}
+\setlength\columnsep{0.05\textwidth}
+\setlength\parindent{0pt}
+\setlength{\smallskipamount}{8pt plus 3pt minus 3pt}
+\setlength{\medskipamount}{16pt plus 6pt minus 6pt}
+\setlength{\bigskipamount}{24pt plus 8pt minus 8pt}
+
+% Style
+\pagestyle{empty}
+\titleformat{\section}{\scshape\LARGE\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{\bigskipamount}{\smallskipamount}
+\newcommand{\heading}[2]{\centering{\sffamily\Huge #1}\\\smallskip{\large{#2}}}
+\newcommand{\entry}[4]{{{\textbf{#1}}} \hfill #3 \\ #2 \hfill #4}
+\newcommand{\tableentry}[3]{\textsc{#1} & #2\expandafter\ifstrequal\expandafter{#3}{}{\\}{\\[6pt]}}
+
+\begin{document}
+
+\vspace*{\fill}
+
+\begin{paracol}{2}
+
+% Name & headline
+\heading{Lucas Ricardo Duarte Bruzzone}{Engenheiro de Computação | Cientista de Dados}
+
+\switchcolumn
+
+% Identity card
+\vspace{0.01\textheight}
+\begin{supertabular}{ll}
+  \footnotesize\faPhone & +55 35 98800 6634 \\
+  \footnotesize\faEnvelope & \href{mailto:lucas.rbruzzone@gmail.com}{lucas.rbruzzone@gmail.com} \\
+  \footnotesize\faLinkedin & \href{https://www.linkedin.com/in/lucas-bruzzone/}{linkedin.com/in/lucas-bruzzone/} \\
+  \footnotesize\faGithub & \href{https://github.com/lucas-bruzzone}{lucas-bruzzone} \\
+\end{supertabular}
+
+\bigskip
+\switchcolumn*
+
+\section{Formação Acadêmica}
+
+\entry{UFSCar}{Mestrado em Ciências da Computação}{São Carlos, Brasil}{2020 -- 2023}
+\begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
+  \item Aplicações em Aprendizado de Máquina.
+  \item Desenvolvimento de um Classificador Fuzzy Incremental Aprimorado.
+  \item Detecção de Novidades em Fluxos de Dados Multiclasse.
+\end{itemize}
+
+\medskip
+
+\entry{IFSULDEMINAS}{Graduação em Engenharia de Computação}{Poços de Caldas, Brasil}{2015 -- 2019}
+
+\switchcolumn
+
+\section{Habilidades}
+\begin{supertabular}{rl}
+  \tableentry{\footnotesize\faCode}{Python \textperiodcentered{} Java \textperiodcentered{} Git}{}
+  \tableentry{}{SQL \textperiodcentered{} Excel \textperiodcentered{} Ferramentas ETL}{}
+  \tableentry{}{}{}
+
+  \tableentry{\footnotesize\faLanguage}{Português \textperiodcentered{} Nativo}{}
+  \tableentry{}{Espanhol \textperiodcentered{} Avançado}{}
+  \tableentry{}{Inglês \textperiodcentered{} Intermediário}{}
+\end{supertabular}
+
+\switchcolumn*
+
+\section{Experiência Profissional}
+
+
+\entry{UFSCar}{Pesquisador Científico}{São Carlos, Brasil}{2022 -- Até o momento}
+\begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
+  \item Pesquisa em Detecção de Novidades em Fluxo de Dados.
+  \item Desenvolvimento de Algoritmos.
+  \item Aplicações Práticas em Ciências da Computação.
+\end{itemize}
+
+\medskip
+
+\entry{TD2I}{Analista em BI e EPM}{Remoto, Latino América}{2019 -- 2021}
+\begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
+  \item Desenvolvimento de Projetos de Sustentação e Melhoria.
+  \item Expertise em Ferramentas ETL como Talend, ODI e SSIS.
+  \item Auxílio em Processos de Melhoria.
+\end{itemize}
+
+\switchcolumn
+
+
+\section{Premiações}
+\begin{supertabular}{rl}
+  \tableentry{2023}{\textbf{Primeiro Lugar}}{}
+  \tableentry{}{Data Challenge EY}{spaceafter}
+
+\end{supertabular}
+
+\end{paracol}
+
+\vspace*{\fill}
+
+\end{document}
